@@ -2,7 +2,7 @@
 
 # What can RAAs do for you?
 
-RAAS is designed to give people the reccomendations they need in everything anime. From the fresh beginner to the Otaku who searches the bottom of barrels after their 3rd Death Note watch, RAAs is your digital bestie in designing a custom made anime playlist.
+RAAS is designed to give people the recommendations they need in everything anime. From the fresh beginner to the Otaku who searches the bottom of barrels after their 3rd Death Note watch, RAAs is your digital bestie in designing a custom made anime playlist.
 
 # Features: 
 MVP of Anime:
