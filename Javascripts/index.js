@@ -1,6 +1,6 @@
 //**Global Variables *//
-// const baseURL = json link
-// an emtpy array possibly
+const baseURL = 'http://localhost:3000'
+let anime = []; 
 
 //**Node Getters *//
 const dropDown1 = document.getElementById ('inputGroupSelect01'); 
@@ -14,13 +14,18 @@ const submitButton = document.getElementById('submit');
 
 const displayBox = document.getElementById('display-panel');
 
+
+
 //**Start-Up*//
 questionTwo.style.display = 'none';  
 questionThree.style.display = 'none';
+// displayBox.display = allTheAnimes; 
 
 
 //**Event Listeners  *//
-// const displayBox = callToAPItoGetJSON
+// document.addEventListener('DOMContentLoaded', function(){
+//     loadAnime();
+// })
 
 dropDown1.addEventListener('click', function(event){
     console.log(dropDown1.value)    
@@ -39,23 +44,40 @@ submitButton.addEventListener('click', function(event){
     if(! ((dropDown2.value == '0' || dropDown3.value =='0' || dropDown1.value == '0'))){   
         console.log("Good") 
 
-        allTheAnimes = fetch("localhost:3000")
-        animeToDisplay = allTheAnimes.value.filter("morning")
-        anime.style.display = "inject animeToDisplay";
+        // allTheAnimes = fetch("localhost:3000")
+        // animeToDisplay = allTheAnimes.value.filter("morning")
+        // anime.style.display = "inject animeToDisplay";
         // filter through all the animes and display
     } else {
         alert("You must complete all three Questions To Get Your Anime!");
     }
 })    
 
-
-// dropDown1.addEventListener('click', function handleClick(){
-//     console.log("hello world")
-// }); 
 //**Event Handlers *//
+const loadAnime = event => {
+    event.preventDefault()
+
+    animes.forEach(anime => {
+        
+    });
+}
+
 //**Requests *//
+const allTheAnimes = () => {
+    fetch(baseURL + "./animes")
+        .then(resp => resp.json())
+        .then(data => {
+            console.log('data', data)
+            anime = data
+        })
+}; 
+
 //**Node Creators *//
 //**MISC *//
+
+
+
+// unused Code
 // const toggleVisiblity = () => {
 //     if(dropDown2().style.display === 'block')
 //         dropDown2().style.displau === 'none';
@@ -65,4 +87,6 @@ submitButton.addEventListener('click', function(event){
 
 // toggleVisiblity(); 
 
-
+// dropDown1.addEventListener('click', function handleClick(){
+//     console.log("hello world")
+// }); 

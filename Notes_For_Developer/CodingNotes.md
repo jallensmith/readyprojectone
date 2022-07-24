@@ -59,3 +59,9 @@ Code References for CSS styling sheet:
 
 4. Edit Playlist
 5. Delete Playlist
+
+- Make Div Container to append text to too "Description of the tracker"
+- Add footer for works cited [similar to readme]
+- Create button for Add, Edit, and Delete
+
+
