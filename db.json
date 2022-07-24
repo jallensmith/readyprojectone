@@ -1,8 +1,94 @@
 {
-    "Title of Array": [
-        {},
-        {},
-        {}
+    "animes" : [
+        {
+            "id": 1,
+            "title" : "Death Note",
+            "description": "lorem",
+            "url": "image",
+            "time" : "evening",
+            "feeling" : "good",
+            "bev"   : "beer"
+        },
+        {
+            "id": 2,
+            "title" : "goodbye",
+            "description": "lorem",
+            "url": "image",
+            "time" : "morning",
+            "feeling" : "sad",
+            "bev"   : "coffee"
+        },
+        {
+            "id": 3,
+            "title" : "yes",
+            "description": "lorem",
+            "url": "image",
+            "time" : "night",
+            "feeling" : "calm",
+            "bev"   : "water"
+        },
+        {
+            "id": 4,
+            "title" : "goodbye",
+            "description": "lorem",
+            "url": "image",
+            "time" : "morning",
+            "feeling" : "sad",
+            "bev"   : "coffee"
+        },
+        {
+            "id": 5,
+            "title" : "goodbye",
+            "description": "lorem",
+            "url": "image",
+            "time" : "morning",
+            "feeling" : "sad",
+            "bev"   : "coffee"
+        },
+        {
+            "id": 6,
+            "title" : "goodbye",
+            "description": "lorem",
+            "url": "image",
+            "time" : "morning",
+            "feeling" : "sad",
+            "bev"   : "coffee"
+        },
+        {
+            "id": 7,
+            "title" : "goodbye",
+            "description": "lorem",
+            "url": "image",
+            "time" : "morning",
+            "feeling" : "sad",
+            "bev"   : "coffee"
+        },
+        {
+            "id": 8,
+            "title" : "goodbye",
+            "description": "lorem",
+            "url": "image",
+            "time" : "morning",
+            "feeling" : "sad",
+            "bev"   : "coffee"
+        },
+        {
+            "id": 9,
+            "title" : "goodbye",
+            "description": "lorem",
+            "url": "image",
+            "time" : "morning",
+            "feeling" : "sad",
+            "bev"   : "coffee"
+        },
+        {
+            "id": 10,
+            "title" : "goodbye",
+            "description": "lorem",
+            "url": "image",
+            "time" : "morning",
+            "feeling" : "sad",
+            "bev"   : "coffee"
+        }
     ]
 }
-

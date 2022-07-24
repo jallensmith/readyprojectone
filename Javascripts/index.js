@@ -45,11 +45,15 @@ dropDown2.addEventListener('click', function(event){
 submitButton.addEventListener('click', function(event){
     if(! ((dropDown2.value == '0' || dropDown3.value =='0' || dropDown1.value == '0'))){   
         console.log("Good") 
+
+        allTheAnimes = fetch("localhost:3000")
+        animeToDisplay = allTheAnimes.value.filter("morning")
+        anime.style.display = "inject animeToDisplay";
         // filter through all the animes and display
     } else {
         // handle bad data 
     }
-})
+})    
 
 
 // dropDown1.addEventListener('click', function handleClick(){
