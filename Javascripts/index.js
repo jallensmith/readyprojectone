@@ -10,6 +10,8 @@ const dropDown3 = document.getElementById ('inputGroupSelect03');
 const questionTwo = document.getElementById ('question-block-b');
 const questionThree = document.getElementById ('question-block-c');
 
+const submitButton = document.getElementById('submit');
+
 //**Start-Up*//
 questionTwo.style.display = 'none';  
 questionThree.style.display = 'none';
@@ -24,6 +26,8 @@ questionThree.style.display = 'none';
 //     dropDown1().addEventListener('click', toggleVisiblity()); 
 // }
 
+// const allTheAnimes = callToAPItoGetJSON
+
 dropDown1.addEventListener('click', function(event){
     console.log(dropDown1.value)
     
@@ -37,6 +41,16 @@ dropDown2.addEventListener('click', function(event){
         questionThree.style.display = 'block'; 
     }
 });
+
+submitButton.addEventListener('click', function(event){
+    if(! ((dropDown2.value == '0' || dropDown3.value =='0' || dropDown1.value == '0'))){   
+        console.log("Good") 
+        // filter through all the animes and display
+    } else {
+        // handle bad data 
+    }
+})
+
 
 // dropDown1.addEventListener('click', function handleClick(){
 //     console.log("hello world")

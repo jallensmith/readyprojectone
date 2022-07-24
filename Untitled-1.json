@@ -1,0 +1,23 @@
+{
+    "animes" : [
+        {
+            "title" : "hello",
+            "time" : "evening",
+            "feeling" : "good",
+            "bev"   : "beer"
+        },
+        {
+            "title" : "goodbye",
+            "time" : "morning",
+            "feeling" : "sad",
+            "bev"   : "coffee"
+        },
+        {
+            "title" : "yes",
+            "time" : "night",
+            "feeling" : "calm",
+            "bev"   : "water"
+        }
+    ]
+}
+

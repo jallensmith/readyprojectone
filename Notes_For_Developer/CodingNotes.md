@@ -41,5 +41,14 @@ git checkout main [to return original branch]
 git merge "name of branch" [commit then merge then commit]
 git push origin edit [upstream to remote repository]
 ```
+Code References for CSS styling sheet:
 
+ <!--    
+            <div class="container"> 
+        <div class = "row">
+        <div class="col">Anime</div>
+        <div class="col"> More Anime</div>       
+        </div>
+        </div>
+        <p class="classfont"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum quos aut sunt temporibus fugiat distinctio nostrum iure rem, veritatis eos et sit quasi ipsa eum cumque qui quibusdam quia ut.</p> -->
 
