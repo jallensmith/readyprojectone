@@ -12,25 +12,18 @@ const questionThree = document.getElementById ('question-block-c');
 
 const submitButton = document.getElementById('submit');
 
+const displayBox = document.getElementById('display-panel');
+
 //**Start-Up*//
 questionTwo.style.display = 'none';  
 questionThree.style.display = 'none';
 
-// const toggleVisiblity = () => {
-//     questionTwo.style.display = 'default';
-// }
-
 
 //**Event Listeners  *//
-// const attachAnswerEvent = () => {
-//     dropDown1().addEventListener('click', toggleVisiblity()); 
-// }
-
-// const allTheAnimes = callToAPItoGetJSON
+// const displayBox = callToAPItoGetJSON
 
 dropDown1.addEventListener('click', function(event){
-    console.log(dropDown1.value)
-    
+    console.log(dropDown1.value)    
     if(! (dropDown1.value == '0')){
         questionTwo.style.display = 'block';    
     }
@@ -51,7 +44,7 @@ submitButton.addEventListener('click', function(event){
         anime.style.display = "inject animeToDisplay";
         // filter through all the animes and display
     } else {
-        // handle bad data 
+        alert("You must complete all three Questions To Get Your Anime!");
     }
 })    
 
@@ -59,20 +52,9 @@ submitButton.addEventListener('click', function(event){
 // dropDown1.addEventListener('click', function handleClick(){
 //     console.log("hello world")
 // }); 
-
-
 //**Event Handlers *//
-// const questionChange = () => {
-    
-// }
-
-
 //**Requests *//
-
-
 //**Node Creators *//
-
-
 //**MISC *//
 // const toggleVisiblity = () => {
 //     if(dropDown2().style.display === 'block')

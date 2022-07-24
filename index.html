@@ -37,6 +37,15 @@
       background-size: cover;
       min-height: 100vh;
     }
+
+    .container2 {
+      position: fixed;
+      width: 700px ;
+      height: 700px ;
+      left: 750px;
+      bottom: 20px;
+      
+    }
   </style>
 
 </head>
@@ -46,7 +55,9 @@
     <header class="text-center"> Ready Anime Assistant </header>
   </div>
   <div class="container" id="main"></div>
-  
+    
+  <div id="displaypanel" class="container2"> </div>
+
     <div id="question-a" class=form1>
       <div class="input-group mb-3">
         <label class="input-group-text">When are you watching?</label>
@@ -93,9 +104,11 @@
     <div id='submit' class=form4>
       <button type="button" class="btn btn-primary"> Get Your Anime!</button>
     </div>
+  <body> 
+
   
   <script src="Javascripts/index.js"></script>
-
+</body> 
 </body>
 
 </html>

@@ -52,3 +52,10 @@ Code References for CSS styling sheet:
         </div>
         <p class="classfont"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum quos aut sunt temporibus fugiat distinctio nostrum iure rem, veritatis eos et sit quasi ipsa eum cumque qui quibusdam quia ut.</p> -->
 
+
+1. Need to Display all the names images from the JSON
+2. Show all the images and names of the anime with text after search
+3. Add to Playlist
+
+4. Edit Playlist
+5. Delete Playlist
