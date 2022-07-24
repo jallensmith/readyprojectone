@@ -11,7 +11,7 @@
         },
         {
             "id": 2,
-            "title" : "goodbye",
+            "title" : "Full Metal Alchemist: Brotherhood",
             "description": "lorem",
             "url": "image",
             "time" : "morning",
@@ -20,7 +20,7 @@
         },
         {
             "id": 3,
-            "title" : "yes",
+            "title" : "The Promised Neverland",
             "description": "lorem",
             "url": "image",
             "time" : "night",
@@ -29,7 +29,7 @@
         },
         {
             "id": 4,
-            "title" : "goodbye",
+            "title" : "Your Lie in April",
             "description": "lorem",
             "url": "image",
             "time" : "morning",
@@ -38,7 +38,7 @@
         },
         {
             "id": 5,
-            "title" : "goodbye",
+            "title" : "Odd Taxi",
             "description": "lorem",
             "url": "image",
             "time" : "morning",
@@ -47,7 +47,7 @@
         },
         {
             "id": 6,
-            "title" : "goodbye",
+            "title" : "Spy x Family",
             "description": "lorem",
             "url": "image",
             "time" : "morning",
@@ -56,7 +56,7 @@
         },
         {
             "id": 7,
-            "title" : "goodbye",
+            "title" : "Demon Slayer",
             "description": "lorem",
             "url": "image",
             "time" : "morning",
@@ -65,7 +65,7 @@
         },
         {
             "id": 8,
-            "title" : "goodbye",
+            "title" : "Attack on Titan",
             "description": "lorem",
             "url": "image",
             "time" : "morning",
@@ -74,7 +74,7 @@
         },
         {
             "id": 9,
-            "title" : "goodbye",
+            "title" : "To Your Eternity",
             "description": "lorem",
             "url": "image",
             "time" : "morning",
@@ -83,7 +83,7 @@
         },
         {
             "id": 10,
-            "title" : "goodbye",
+            "title" : "Sword Art Online",
             "description": "lorem",
             "url": "image",
             "time" : "morning",
