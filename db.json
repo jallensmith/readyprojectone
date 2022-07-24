@@ -12,7 +12,7 @@
         {
             "id": 2,
             "title" : "Full Metal Alchemist: Brotherhood",
-            "description": "lorem",
+            "description": "Brothers Edward and Alphonse Elric search for the Philsopher's Stone, hoping to restore their bodies, which were lost when they attempted to use their alchemy skills to resurrect their deceased mother. Edward, who lost only limbs, joins the State Military, which gives him the freedom to continue the search as he tries to restore his brother, whose soul is tethered to earth by a suit of armor. However, Edward and Alphonse are not the only ones seeking the powerful stone. And as they search, they learn of a plot to transmute the entire country for reasons they cannot comprehend.",
             "url": "https://i.imgur.com/i3Wedy0.jpg",
             "time" : "morning",
             "feeling" : "calm",
@@ -21,7 +21,7 @@
         {
             "id": 3,
             "title" : "The Promised Neverland",
-            "description": "lorem",
+            "description": "When young orphans discover the secret and sinister purpose they were raised for, they look for a way to escape from their evil caretaker.",
             "url": "https://i.imgur.com/YDvvJKc.jpg",
             "time" : "evening",
             "feeling" : "tears",
@@ -30,7 +30,7 @@
         {
             "id": 4,
             "title" : "Your Lie in April",
-            "description": "lorem",
+            "description": "The story follows a young pianist named Kosei Arima, who loses the ability to perform the piano after his mother's death, and his experiences after he meets violinist Kaori Miyazono.",
             "url": "https://i.imgur.com/lCK2p5j.jpg",
             "time" : "morning",
             "feeling" : "tears",
@@ -39,7 +39,7 @@
         {
             "id": 5,
             "title" : "Odd Taxi",
-            "description": "lorem",
+            "description": " Set in a world of anthropomorphic animals, it tells the story of walrus taxi driver Odokawa, who converses with his customers and learns about various mysteries and oddities occurring in Tokyo, including a schoolgirl's strange disappearance that leads to him being followed by both the police and the yakuza.",
             "url": "https://i.imgur.com/MtFZWR4.jpg",
             "time" : "afternoon",
             "feeling" : "calm",
@@ -48,7 +48,7 @@
         {
             "id": 6,
             "title" : "Spy x Family",
-            "description": "lorem",
+            "description": " The story follows a spy who has to build a family in order to execute a mission, not realizing that the girl he adopts as his daughter is a telepath, and the woman he agrees to be in a marriage with is a skilled assassin.",
             "url": "https://i.imgur.com/C47niBX.jpg",
             "time" : "morning",
             "feeling" : "energy",
@@ -56,8 +56,8 @@
         },
         {
             "id": 7,
-            "title" : "Demon Slayer",
-            "description": "lorem",
+            "title" : "Demon Slayer: Kimesty no Yaiba",
+            "description": "It follows teenage Tanjiro Kamado, who strives to become a demon slayer after his family was slaughtered and his younger sister, Nezuko, turned into a demon.",
             "url": "https://i.imgur.com/jtlnHoH.jpg",
             "time" : "evening",
             "feeling" : "energy",
@@ -66,7 +66,7 @@
         {
             "id": 8,
             "title" : "Attack on Titan",
-            "description": "lorem",
+            "description": "When man-eating Titans first appeared 100 years ago, humans found safety behind massive walls that stopped the giants in their tracks. But the safety they have had for so long is threatened when a colossal Titan smashes through the barriers, causing a flood of the giants into what had been the humans' safe zone. During the carnage that follows, soldier Eren Jaeger sees one of the creatures devour his mother, which leads him to vow that he will kill every Titan. He enlists some friends who survived to help him, and that group is humanity's last hope for avoiding extinction at the hands of the monsters.",
             "url": "https://i.imgur.com/QwouIWV.jpg",
             "time" : "night",
             "feeling" : "energy",
@@ -75,7 +75,7 @@
         {
             "id": 9,
             "title" : "To Your Eternity",
-            "description": "lorem",
+            "description": "The story is about an immortal being, Fushi, who takes on multiple forms, including that of an abandoned white-haired village boy and his white wolf in order to stimulate as it learns what it is to be truly human.",
             "url": "https://i.imgur.com/oZwMdyI.jpg",
             "time" : "morning",
             "feeling" : "tears",
@@ -84,7 +84,7 @@
         {
             "id": 10,
             "title" : "Sword Art Online",
-            "description": "lorem",
+            "description": "The series takes place in the near future and focuses on protagonists Kazuto Kirito Kirigaya and Asuna Yuuki as they play through various virtual reality MMORPG worlds. ",
             "url": "https://i.imgur.com/0z72puP.jpg",
             "time" : "afternoon",
             "feeling" : "calm",
