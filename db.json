@@ -4,90 +4,90 @@
             "id": 1,
             "title" : "Death Note",
             "description": "The series centers around Light's subsequent attempts to use the Death Note to carry out a worldwide massacre of individuals whom he deems immoral and to create a crime-free society, using the alias of a god-like vigilante named Kira, and the subsequent efforts of an elite Japanese police task force, led by enigmatic detective L, to apprehend him",
-            "url": "image",
-            "time" : "evening",
-            "feeling" : "good",
-            "bev"   : "beer"
+            "Poster": "https://i.imgur.com/dsILWIC.jpg",
+            "time" : "night",
+            "feeling" : "energy",
+            "bev"   : "alc"
         },
         {
             "id": 2,
             "title" : "Full Metal Alchemist: Brotherhood",
             "description": "lorem",
-            "url": "image",
+            "url": "https://i.imgur.com/i3Wedy0.jpg",
             "time" : "morning",
-            "feeling" : "sad",
+            "feeling" : "calm",
             "bev"   : "coffee"
         },
         {
             "id": 3,
             "title" : "The Promised Neverland",
             "description": "lorem",
-            "url": "image",
-            "time" : "night",
-            "feeling" : "calm",
+            "url": "https://i.imgur.com/YDvvJKc.jpg",
+            "time" : "evening",
+            "feeling" : "tears",
             "bev"   : "water"
         },
         {
             "id": 4,
             "title" : "Your Lie in April",
             "description": "lorem",
-            "url": "image",
+            "url": "https://i.imgur.com/lCK2p5j.jpg",
             "time" : "morning",
-            "feeling" : "sad",
-            "bev"   : "coffee"
+            "feeling" : "tears",
+            "bev"   : "water"
         },
         {
             "id": 5,
             "title" : "Odd Taxi",
             "description": "lorem",
-            "url": "image",
-            "time" : "morning",
-            "feeling" : "sad",
-            "bev"   : "coffee"
+            "url": "https://i.imgur.com/MtFZWR4.jpg",
+            "time" : "afternoon",
+            "feeling" : "calm",
+            "bev"   : "alc"
         },
         {
             "id": 6,
             "title" : "Spy x Family",
             "description": "lorem",
-            "url": "image",
+            "url": "https://i.imgur.com/C47niBX.jpg",
             "time" : "morning",
-            "feeling" : "sad",
+            "feeling" : "energy",
             "bev"   : "coffee"
         },
         {
             "id": 7,
             "title" : "Demon Slayer",
             "description": "lorem",
-            "url": "image",
-            "time" : "morning",
-            "feeling" : "sad",
-            "bev"   : "coffee"
+            "url": "https://i.imgur.com/jtlnHoH.jpg",
+            "time" : "evening",
+            "feeling" : "energy",
+            "bev"   : "alc"
         },
         {
             "id": 8,
             "title" : "Attack on Titan",
             "description": "lorem",
-            "url": "image",
-            "time" : "morning",
-            "feeling" : "sad",
-            "bev"   : "coffee"
+            "url": "https://i.imgur.com/QwouIWV.jpg",
+            "time" : "night",
+            "feeling" : "energy",
+            "bev"   : "alc"
         },
         {
             "id": 9,
             "title" : "To Your Eternity",
             "description": "lorem",
-            "url": "image",
+            "url": "https://i.imgur.com/oZwMdyI.jpg",
             "time" : "morning",
-            "feeling" : "sad",
-            "bev"   : "coffee"
+            "feeling" : "tears",
+            "bev"   : "water"
         },
         {
             "id": 10,
             "title" : "Sword Art Online",
             "description": "lorem",
-            "url": "image",
-            "time" : "morning",
-            "feeling" : "sad",
+            "url": "https://i.imgur.com/0z72puP.jpg",
+            "time" : "afternoon",
+            "feeling" : "calm",
             "bev"   : "coffee"
         }
     ]
