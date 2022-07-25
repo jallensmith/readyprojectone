@@ -103,7 +103,7 @@ function showAnime(anime) {
 //         data.forEach(anime => showAnime(anime)))
 //   }; 
 
-async function getAnime() {
+async function getAnime(anime) {
     const response = await fetch(baseURL)
     const data = await response.json();
     allTheAnimes = data; 
