@@ -100,15 +100,30 @@ function showAnime(anime) {
 //       console.log("data", data)
 //     })
 //   }; 
-//         data.forEach(anime => showAnime(anime)))
+        
 //   }; 
 
 async function getAnime(anime) {
     const response = await fetch(baseURL)
     const data = await response.json();
     allTheAnimes = data; 
-}; 
+    // for(const anime of allTheAnimes){
+    //     console.log(anime.title); 
+    //     
+    console.log(allTheAnimes);
+} 
 
+// filter through values
+
+
+ 
+
+
+
+
+
+// for in - this is used for an object 
+// for of - use this method for an array
 
  
 //**Node Creators *//
