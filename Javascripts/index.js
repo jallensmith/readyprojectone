@@ -65,12 +65,11 @@ addDigi.addEventListener('click', e => {
     e.preventDefault
     //parameter below is what user has typed in searchbox
     addDigiToTeam(currentDigimon);
-    // form.rest();
+    form.rest();
 })
  
 deleteDigi.addEventListener('click', e => {
     e.preventDefault
-    //parameter below is what user has typed in searchbox
     console.log(digimonStorage);
     removeDigiFromTeam(digimonStorage.pop());
     // form.rest();
