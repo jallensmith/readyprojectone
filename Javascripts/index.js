@@ -1,146 +1,106 @@
-//**Global Variables *//
-const baseURL = 'http://localhost:3000/animes'
-let allTheAnimes = [];
-
-//**Node Getters *//
-const dropDown1 = document.getElementById ('inputGroupSelect01'); 
-const dropDown2 = document.getElementById ('inputGroupSelect02'); 
-const dropDown3 = document.getElementById ('inputGroupSelect03'); 
-
-const questionTwo = document.getElementById ('question-block-b');
-const questionThree = document.getElementById ('question-block-c');
-
-const submitButton = document.getElementById('submit');
-
-const displayBox = document.getElementById('display-panel');
-
-//**Start-Up*//
-questionTwo.style.display = 'none';  
-questionThree.style.display = 'none';
-
-//**Event Listeners  *//
-// document.addEventListener('DOMContentLoaded', function(){
-//     loadAnime();
-// })
-
-dropDown1.addEventListener('click', function(event){
-    console.log(dropDown1.value)    
-    if(! (dropDown1.value == '0')){
-        questionTwo.style.display = 'block';    
-    }
-});
-
-dropDown2.addEventListener('click', function(event){
-    if(! (dropDown2.value == '0')){
-        questionThree.style.display = 'block'; 
-    }
-});
-
-
-document.addEventListener("DOMContentLoaded", (event) => {
-    event.preventDefault(); 
-submitButton.addEventListener('click', function(event){
-    if(! ((dropDown2.value == '0' || dropDown3.value =='0' || dropDown1.value == '0'))){   
-        console.log("Good")        
-        // animeToDisplay = allTheAnimes.value.filter("morning")
-        // anime.style.display = "inject animeToDisplay";
-        // filter through all the animes and display
-    } else {
-        alert("You must complete all three Questions To Get Your Anime!");
-    }
-});
-getAnime(); 
-});
-
+// Global Variables
+const digiAPI = `https://digimon-api.vercel.app/api/digimon`;
+let allDigimon = [];
+let currentDigimon = '';
+let digimonStorage = [];
  
-//**Event Handlers *//
-// const loadAnime = event => {
-//     event.preventDefault()
-
-//     animes.forEach(anime => {
-        
-//     });
-// }
-
-function showAnime(anime) { 
-    const div = document.createElement('div');
-    div.classList.add("card")
-    const h2 = document.createElement('h2');
-    h2.textContent = anime.title
-    const h3 = document.createElement('h3');
-    h3.textContent = anime.description
-
-    const img = document.createElement('img')
-    img.src = anime.poster
-    img.classList.add("anime-avatar")
-
-    // const button = document.createElement('button')
-    // button.className.add("add-anime");
-    // button.id = anime.id
-
-    div.append(h2, h3, img)
-    displayBox.append(div)
-}; 
-
-
-//**Requests *//
-// const allTheAnimes = () => {
-//     fetch(baseURL + "./animes")
-//         .then(resp => resp.json())
-//         .then(data => {
-//             console.log('data', data)
-//             anime = data
-//         })
-// }; 
-
-// function getAnime() {
-//     fetch(baseURL)
-//     .then(response => response.json())
-//     .then(data =>{
-//       console.log("data", data)
-//     })
-//   }; 
-        
-//   }; 
-
-async function getAnime(anime) {
-    const response = await fetch(baseURL)
+// Node Getters
+const digiDisplay = document.getElementById('digi-main');
+const digiHolder = document.getElementById('digi-container');
+const digiTeam = document.getElementById('digi-loads');
+const searchBox = document.getElementById('mon-name');
+const addDigi = document.getElementById('add-bttn');
+const deleteDigi = document.getElementById('delete-bttn');
+const searchBttn = document.getElementById('search-bttn')
+ 
+ 
+async function loadDigi(userInput) {
+    const response = await fetch(digiAPI);
     const data = await response.json();
-    allTheAnimes = data; 
-    // for(const anime of allTheAnimes){
-    //     console.log(anime.title); 
-    //     
-    console.log(allTheAnimes);
-} 
-
-// filter through values
-
-
+    allDigimons = data;
  
-
-
-
-
-
-// for in - this is used for an object 
-// for of - use this method for an array
-
+    for (const digimon of allDigimons) {
  
-//**Node Creators *//
-//**MISC *//
-
-
-
-// unused Code
-// const toggleVisiblity = () => {
-//     if(dropDown2().style.display === 'block')
-//         dropDown2().style.displau === 'none';
-//     else 
-//         dropDown1().style.display = 'block'
-// }
-
-// toggleVisiblity(); 
-
-// dropDown1.addEventListener('click', function handleClick(){
-//     console.log("hello world")
-// }); 
+        if(digimon.name.toUpperCase() === userInput.toUpperCase()){
+            console.log(digimon);
+            const previewBox = document.createElement('div');
+            const digiModel = document.createElement('img');
+            const digiName = document.createElement('h1');
+            const digiLevel = document.createElement('h3');
+ 
+            digiName.innerText = digimon.name;
+            digiModel.src = digimon.img;
+            digiLevel.innerText = digimon.level;
+ 
+            digiDisplay.append(previewBox);
+ 
+            previewBox.append(digiName);
+            // document.createElement('br');
+            previewBox.append(digiModel);
+            // document.createElement('br');
+            previewBox.append(digiLevel);
+ 
+            console.log(digimon.name);
+            console.log(digimon.level);
+ 
+            currentDigimon = digimon;
+            digimonStorage.push(digimon.name);
+        }
+    }
+ 
+};
+ 
+// document.addEventListener('DOMContentLoaded', function () {
+//     loadDigi();
+// });
+ 
+searchBttn.addEventListener('click', e => {
+    e.preventDefault
+    //parameter below is what user has typed in searchbox
+    loadDigi(searchBox.value);
+    // form.rest();
+})
+ 
+addDigi.addEventListener('click', e => {
+    e.preventDefault
+    //parameter below is what user has typed in searchbox
+    addDigiToTeam(currentDigimon);
+    // form.rest();
+})
+ 
+deleteDigi.addEventListener('click', e => {
+    e.preventDefault
+    //parameter below is what user has typed in searchbox
+    console.log(digimonStorage);
+    removeDigiFromTeam(digimonStorage.pop());
+    // form.rest();
+})
+ 
+function removeDigiFromTeam(digimonToBeDeleted){
+    console.log('hello world')
+    console.log(digimonToBeDeleted)
+ 
+    document.getElementById(digimonToBeDeleted.toUpperCase()).remove();
+};
+ 
+function addDigiToTeam(digimonToBeAdded) {
+    const previewBox = document.createElement('div');
+    previewBox.id = digimonToBeAdded.name.toUpperCase();
+ 
+            const digiModel = document.createElement('img');
+            const digiName = document.createElement('h1');
+            const digiLevel = document.createElement('h3');
+ 
+            digiName.innerText = digimonToBeAdded.name;
+            digiModel.src = digimonToBeAdded.img;
+            digiLevel.innerText = digimonToBeAdded.level;
+ 
+            digiHolder.append(previewBox);
+ 
+            previewBox.append(digiName);
+            // document.createElement('br');
+            previewBox.append(digiModel);
+            // document.createElement('br');
+            previewBox.append(digiLevel);
+            previewBox.append(deleteDigi);
+};
