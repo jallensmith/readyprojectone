@@ -1,119 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-
+ 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Bootstrap v5: Latest compiled and minified CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-  <link rel="stylesheet" href="./Stying Sheets/index.css">
-  <link rel="stylesheet" href="./Stying Sheets/css.scss">
-  <link rel="stylesheet" href="./Stying Sheets/Fonts.css">
-
-  <!-- Fonts-->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-
-  <!-- Bootstrapv5: Latest compiled and minified JavaScript -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"></script>
-  <link rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css">
-
-  <title>R.A.A.s.</title>
-
-  <style>
-    #body {
-      background-image: url(./images/nio-milano-UdeDyN4K7S0-unsplash.jpg);
-      background-position: center;
-      background-size: cover;
-      min-height: 100vh;
-    } 
-  </style>
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css" class="rel">
+    <title>Digimon Team Builder</title>
 </head>
-
-<body id="body">
-  <div class="header" id="header">
-    <header class="text-center"> Ready Anime Assistant </header>
-  </div>
-  <div class="container" id="main"></div>
-  <nav id="summary"> 
-    <p> Ready Anime Assistant is your digital bestie in all things anime.</p>
-  </nav>
-    
-  <div id="displaypanel" class="container2"> 
-    <img src="https://i.imgur.com/l9VWQwL.jpg" alt="" class="src">
-    <img src="https://i.imgur.com/UHANNNP.jpg" alt="" class="src">
-    <img src="https://i.imgur.com/biK6ZOF.jpg" alt="" class="src">
-    <img src="https://i.imgur.com/uAGfYEN.jpg" alt="" class="src">
-    <img src="https://i.imgur.com/4dzRUij.jpg" alt="" class="src">
-    <img src="https://i.imgur.com/kE7Q61Q.jpg" alt="" class="src">
-    <img src="https://i.imgur.com/mt09Eo2.jpg" alt="" class="src">
-    <img src="https://i.imgur.com/bKZSkww.jpg" alt="" class="src">
-    <img src="https://i.imgur.com/RJj2xgZ.jpg" alt="" class="src">
-    <img src="https://i.imgur.com/4tvDmCF.jpg" alt="" class="src">
-  </div>
-
-    <div id="question-a" class=form1>
-      <div class="input-group mb-3">
-        <label class="input-group-text">When are you watching?</label>
-        <select class="form-select" id="inputGroupSelect01">
-          <option value="0" selected>I'm watching...</option>
-          <span id="answer-question-1">
-            <option value="1">In the Morning</option>
-            <option value="2">The Afternoon</option>
-            <option value="3">The Evening</option>
-            <option value="4">Late Night</option>
-          </span>
-        </select>
-      </div>
+ 
+<body>
+    <img id="logo" src="" alt="Digimon Logo">
+    <div id="search-box">
+        <label for="search-digimon">
+            <span>
+                Enter Digimon Name Here!
+            </span>
+        </label>
+        <input id="mon-name" type="text" placeholder="Search by Digmon Name">
+        <button id="search-bttn">Search</button>
     </div>
-
-    <div id="question-block-b" class=form2>
-      <div class="input-group mb-3">
-        <label class="input-group-text" for="inputGroupSelect02">Feeling After Watch?</label>
-        <select class="form-select" id="inputGroupSelect02">
-          <option value="0" selected>I want to feel..</option>
-          <span id="answer-question-2">
-            <option value="1">Energized</option>
-            <option value="2">A Puddle of Tears</option>
-            <option value="3">Calm and Introspective</option>
-          </span>
-        </select>
-      </div>
+    <div id="team-bttns">
+        <button id="add-bttn">Add to Downloads</button>
+        <button id="delete-bttn">Delete Last Download</button>
+        <br>
+        <h4>
+            <a href="Link to All Digis Here">Catalog of Digimon!</a>
+        </h4>
     </div>
-
-    <div id="question-block-c" class=form3>
-      <div class="input-group mb-3">
-        <label class="input-group-text" for="inputGroupSelect03">Beverage of Choice?</label>
-        <select class="form-select" id="inputGroupSelect03">
-          <option value="0" selected>I'm drinking...</option>
-          <span id="answer-question-3">
-            <option value="1">Water or Juice</option>
-            <option value="2">Coffee</option>
-            <option value="3">Alcholic</option>
-          </span>
-        </select>
-      </div>
+    <div id="digi-main">
+        <h2>
+            Welcome! Digimon will load here.
+        </h2>
     </div>
-
-    <div id='submit' class=form4>
-      <button type="button" class="btn btn-primary"> Get Your Anime!</button>
+    <div id="digi-description">
+        <p>
+            Description of Digimon and how it works.
+        </p>
     </div>
-  <body> 
-
-  
-  <script src="Javascripts/index.js"></script>
-</body> 
+    <div id="digi-container">
+        <div id="digi-loads">
+            <div id="load1"></div>
+            <div id="load2"></div>
+            <div id="load3"></div>
+        </div>
+    </div>
+    <div id="error-message" hidden>
+        <h1>
+            Error!
+        </h1>
+        <h2>
+            Only Six Loads are Available!
+        </h2>
+    </div>
+    <div id="nonlocate-message" hidden>
+        <h2>
+            We were unable to find that Digimon at this time. :(
+        </h2>
+    </div>
+    <footer>
+        <h3>
+            <strong>Important: </strong>
+            I do not own Digimon nor claim property. Thank you to <a href=''><b>(username)</b></a> for the inspiration
+            and thank you to the Flatiron Team for helping me through this. The photo is an original work by the
+            developer of this page, <em>Jerome Allen-Smith.</em>
+        </h3>
+    </footer>
+    <script src="./index.js"></script>
 </body>
-
+ 
 </html>
