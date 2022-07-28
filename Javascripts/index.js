@@ -12,7 +12,11 @@ const searchBox = document.getElementById('mon-name');
 const addDigi = document.getElementById('add-bttn');
 const deleteDigi = document.getElementById('delete-bttn');
 const searchBttn = document.getElementById('search-bttn');
+const loadOne = document.getElementById('load1');
+const loadTwo = document.getElementById('load2');
+const loadThree = document.getElementById('load3');
 
+// Fetch Requests
 async function loadDigi(userInput) {
     const response = await fetch(digiAPI);
     const data = await response.json();
@@ -44,18 +48,24 @@ async function loadDigi(userInput) {
 
             currentDigimon = digimon;
             digimonStorage.push(digimon.name);
-        } else { 
-            searchErrorDisplay = () => {
-                const previewBox = document.createElement('div');
-                const error = document.getElementById('nonlocate-message')
-                error.display.append(previewBox); 
+        } else {
+            // alert('There is no Digimon by that name')
+            // break
+            // searchErrorDisplay = () => {
+            //     const previewBox = document.createElement('div');
+            //     const error = document.getElementById('nonlocate-message')
+            //     error.style.display.append(previewBox); 
+            //     console.log(error); 
+            // How do I the get error message to pop up and leave?
             }
         }
     }
-};
+// };
 
 document.addEventListener('DOMContentLoaded', function () {
     loadDigi();
+    addButton(); 
+    deleteBttn(); 
 });
 
 searchBttn.addEventListener('click', e => {
@@ -67,23 +77,28 @@ searchBttn.addEventListener('click', e => {
     })
 })
 
-addDigi.addEventListener('click', e => {
+const addButton = () => addDigi.addEventListener('click', e => {
     addDigiToTeam(currentDigimon);
 
 })
 
-deleteDigi.addEventListener('click', e => {
+const deleteBttn = () =>deleteDigi.addEventListener('click', e => {
     // console.log(digimonStorage);
     removeDigiFromTeam(digimonStorage.pop());
+    // digiHolder.replaceChildren(''); 
+    // How to clear div and have it deleted
 })
+
 
 
 function removeDigiFromTeam(digimonToBeDeleted) {
     console.log(digimonToBeDeleted)
 
     document.getElementById(digimonToBeDeleted.toUpperCase()).remove();
+
 };
 
+// Event Handler 
 function addDigiToTeam(digimonToBeAdded) {
     const previewBox = document.createElement('div');
     previewBox.id = digimonToBeAdded.name.toUpperCase();
