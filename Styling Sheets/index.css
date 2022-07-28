@@ -1,3 +1,52 @@
+header {
+    position: relative;
+    align-items: center;
+    padding-left: 600px;
+}
+
+#search-box {
+    position: relative;
+    align-items: center;
+    padding-left: 600px;
+    padding-top: 10px;
+}
+
+#team-bttns {
+    position: relative;
+    top: 625px;
+    align-content: center;
+    align-items: center;
+    padding-left: 650px;
+}
+
+#hyperlink {
+    position: relative;
+    padding-left: 60px;
+}
+
+footer {
+    position: fixed;
+    left: 1px;
+    top: 871px;
+}
+
+#digi-main{
+    bottom: 10px;
+    position: relative;
+    align-items: center;
+    left: 705px;
+    top: -120px;
+    width: 300px;
+    display: inline-block;
+}
+
+#digi-container{
+    float: right;
+    position: relative;
+    bottom: 125px;
+    right: 153px;
+}
+
 /* #body {
     background-image: url(./images/nio-milano-UdeDyN4K7S0-unsplash.jpg);
     background-position: center;

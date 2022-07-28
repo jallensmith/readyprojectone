@@ -1,6 +1,6 @@
 // Global Variables
 const digiAPI = `https://digimon-api.vercel.app/api/digimon`;
-let allDigimon = [];
+let allDigimons = [];
 let currentDigimon = '';
 let digimonStorage = [];
  
@@ -11,8 +11,7 @@ const digiTeam = document.getElementById('digi-loads');
 const searchBox = document.getElementById('mon-name');
 const addDigi = document.getElementById('add-bttn');
 const deleteDigi = document.getElementById('delete-bttn');
-const searchBttn = document.getElementById('search-bttn')
- 
+const searchBttn = document.getElementById('search-bttn');
  
 async function loadDigi(userInput) {
     const response = await fetch(digiAPI);
@@ -50,9 +49,9 @@ async function loadDigi(userInput) {
  
 };
  
-// document.addEventListener('DOMContentLoaded', function () {
-//     loadDigi();
-// });
+document.addEventListener('DOMContentLoaded', function () {
+    loadDigi();
+});
  
 searchBttn.addEventListener('click', e => {
     e.preventDefault
@@ -60,23 +59,20 @@ searchBttn.addEventListener('click', e => {
     loadDigi(searchBox.value);
     // form.rest();
 })
+
+
  
 addDigi.addEventListener('click', e => {
-    e.preventDefault
-    //parameter below is what user has typed in searchbox
     addDigiToTeam(currentDigimon);
-    form.rest();
+    
 })
  
 deleteDigi.addEventListener('click', e => {
-    e.preventDefault
-    console.log(digimonStorage);
+    // console.log(digimonStorage);
     removeDigiFromTeam(digimonStorage.pop());
-    // form.rest();
-})
+    })
  
 function removeDigiFromTeam(digimonToBeDeleted){
-    console.log('hello world')
     console.log(digimonToBeDeleted)
  
     document.getElementById(digimonToBeDeleted.toUpperCase()).remove();
@@ -103,3 +99,5 @@ function addDigiToTeam(digimonToBeAdded) {
             previewBox.append(digiLevel);
             previewBox.append(deleteDigi);
 };
+ 
+ 
