@@ -48,16 +48,7 @@ async function loadDigi(userInput) {
 
             currentDigimon = digimon;
             digimonStorage.push(digimon.name);
-        } else {
-            // alert('There is no Digimon by that name')
-            // break
-            // searchErrorDisplay = () => {
-            //     const previewBox = document.createElement('div');
-            //     const error = document.getElementById('nonlocate-message')
-            //     error.style.display.append(previewBox); 
-            //     console.log(error); 
-            // How do I the get error message to pop up and leave?
-            }
+        } 
         }
     }
 // };
@@ -70,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 searchBttn.addEventListener('click', e => {
     loadDigi(searchBox.value);
-    // How do clear input field and clear DIV after form reset?
+    searchBox.value = '';
     searchBttn.addEventListener('submit', function(){
         loadDigi(digimon.name)
         form.reset()
@@ -79,7 +70,7 @@ searchBttn.addEventListener('click', e => {
 
 const addButton = () => addDigi.addEventListener('click', e => {
     addDigiToTeam(currentDigimon);
-
+    
 })
 
 const deleteBttn = () =>deleteDigi.addEventListener('click', e => {
@@ -87,6 +78,7 @@ const deleteBttn = () =>deleteDigi.addEventListener('click', e => {
     removeDigiFromTeam(digimonStorage.pop());
     // digiHolder.replaceChildren(''); 
     // How to clear div and have it deleted
+    // Make a copy of the array and delete the copy?
 })
 
 
@@ -95,6 +87,8 @@ function removeDigiFromTeam(digimonToBeDeleted) {
     console.log(digimonToBeDeleted)
 
     document.getElementById(digimonToBeDeleted.toUpperCase()).remove();
+    // ResetDiv
+    // Into Three Separate Cards
 
 };
 

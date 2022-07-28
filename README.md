@@ -18,3 +18,8 @@ Users will be able to share their playlistUsers will be able to like shows they 
 Users will be able to leave reviews on shows 
 
 Functionalities:- Use of array and array iteration- if, if else, else if statements- Sliding of image? Moving image? Trailer for each anime?- Avoid use of having to slide mouse down- Click Events, Domcontentloaded, Form- if statement to change the css of the background? And add images?- video with title card used from after effects, transitions on premiere, and recorded video of using the app, as well as video of myself (Think YouTube video instructional with V.O.)
+
+Resources:
+https://www.youtube.com/watch?v=7Yigdj6lEXk
+https://www.youtube.com/watch?v=vkqZC_rEkVA 
+https://www.youtube.com/watch?v=KnKMGCSPj3Y
