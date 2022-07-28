@@ -4,11 +4,19 @@ header {
     padding-left: 600px;
 }
 
+body {
+    background-image: url();
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+  }
+
 #search-box {
     position: relative;
     align-items: center;
     padding-left: 600px;
     padding-top: 10px;
+    color:aliceblue
 }
 
 #team-bttns {
@@ -17,17 +25,20 @@ header {
     align-content: center;
     align-items: center;
     padding-left: 650px;
+    color:aliceblue
 }
 
 #hyperlink {
     position: relative;
     padding-left: 60px;
+    color:aliceblue
 }
 
 footer {
     position: fixed;
     left: 1px;
     top: 871px;
+    color:aliceblue
 }
 
 #digi-main{
@@ -38,6 +49,7 @@ footer {
     top: -120px;
     width: 300px;
     display: inline-block;
+    color:aliceblue
 }
 
 #digi-container{
@@ -45,6 +57,11 @@ footer {
     position: relative;
     bottom: 125px;
     right: 153px;
+    color:aliceblue
+}
+
+#digi-description{
+    color:aliceblue
 }
 
 /* #body {
