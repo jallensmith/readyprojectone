@@ -77,6 +77,8 @@ const deleteBttn = () => deleteDigi.addEventListener('click', e => {
     deleteDigiFromTeam();
 })
 
+// dblclick EL & Keypress https://www.w3schools.com/howto/howto_js_trigger_button_enter.asp
+
 // Event Handler 
 function addDigiToTeam() {
     digimonStorage.push(currentDigimon);
