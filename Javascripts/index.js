@@ -26,7 +26,6 @@ async function loadDigi(userInput) {
     for (const digimon of allDigimons) {
 
         if (digimon.name.toUpperCase() === userInput.toUpperCase()) {
-            // console.log(digimon);
             const previewBox = document.createElement('div');
             const digiModel = document.createElement('img');
             const digiName = document.createElement('h1');
@@ -34,40 +33,30 @@ async function loadDigi(userInput) {
 
             digiName.innerText = digimon.name;
             digiModel.src = digimon.img;
-            digiLevel.innerText = digimon.level;
+            digiLevel.innerText = 'Level: ' + digimon.level;
 
             digiDisplay.innerHTML = '';
 
             digiDisplay.append(previewBox);
 
             previewBox.append(digiName);
-            // document.createElement('br');
             previewBox.append(digiModel);
-            // document.createElement('br');
             previewBox.append(digiLevel);
 
-            // console.log(digimon.name);
-            // console.log(digimon.level);
-
             currentDigimon = digimon;
-            // digimonStorage.push(digimon);
             digimonFound = true;
-
-            console.log(digimonStorage);
+            // console.log(currentDigimon);
         }
-
     }
 
     if (!digimonFound) {
         alert('no digimon found')
     }
-
-}
-// };
+}; 
 
 // Event Listeners
 document.addEventListener('DOMContentLoaded', function () {
-    // loadDigi();
+    loadDigi();
     addButton();
     deleteBttn();
 });
@@ -76,37 +65,28 @@ searchBttn.addEventListener('click', e => {
     loadDigi(searchBox.value);
     searchBox.value = '';
     document.addEventListener('submit', function () {
-        // loadDigi(digimon.name)
         form.reset()
     })
 });
 
 const addButton = () => addDigi.addEventListener('click', e => {
-    // const currentDigimon = digimonStorage.length-1
-    // addDigiToTeam(currentDigimon);
-    // console.log(currentDigimon)
     addDigiToTeam(digimonStorage);
-    console.log(digimonStorage);
 });
 
 const deleteBttn = () => deleteDigi.addEventListener('click', e => {
     deleteDigiFromTeam();
-    console.log(digimonStorage);
 })
-
 
 // Event Handler 
 function addDigiToTeam() {
     digimonStorage.push(currentDigimon);
+    // console.log(currentDigimon);
 
     let member = digimonStorage[digimonStorage.length - 1]
 
     const digiModel = document.createElement('img');
     const digiName = document.createElement('h1');
     const digiLevel = document.createElement('h3');
-
-    // removeBtn.addEventListener("click", (e) =>removeMember(e.target))
-    // removeBtn.innerText = "Delete from Memory"
 
     digiName.innerText = member.name;
     digiModel.src = member.img;
@@ -152,16 +132,13 @@ function deleteDigiFromTeam() {
     if (loadThree.innerHTML) {
         loadThree.innerHTML = '';
         digimonStorage.pop();
-        console.log('check three')
 
     } else if (loadTwo.innerHTML) {
         loadTwo.innerHTML = '';
         digimonStorage.pop();
-        console.log('check three')
 
     } else if (loadOne.innerHTML) {
         loadOne.innerHTML = '';
         digimonStorage.pop();
-        console.log('check three')
     }
 };
