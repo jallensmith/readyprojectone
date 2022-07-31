@@ -11,7 +11,6 @@
         body  {
           background-image: url("./Images/Background1.gif");
         }
-
         </style>
 </head>
  
@@ -32,27 +31,32 @@
         <button id="add-bttn">Add to Downloads</button>
         <button id="delete-bttn">Delete Last Download</button>
         <br>
-        <h4 id="hyperlink">
-            <a href="https://wikimon.net/Visual_List_of_Digimon">Catalog of Digimon!</a>
-        </h4>
+        <h2 id="hyperlink">
+            <a href="https://wikimon.net/Visual_List_of_Digimon"> Catalog of Digimon! </a>
+        </h2>
     </div>
     
-    <div class="wrapper" display="inline-block">
+    <div class="wrapper">
         <div id="digi-description">
         <h2>
-            Welcome! Digimon will load here.
+            Welcome to the Digimon Team Builder!
         </h2>
         <p>
-            Description of Digimon and how it works.
+            Digimon (デジモン Dejimon?), short for "Digital Monster" (デジタルモンスター Dejitaru Monsutā?), are mysterious 
+            lifeforms that were discovered in the Computer Network in 1997. 
+            Digimon include almost all the creatures that reside within a parallel universe called the "Digital World." They age via a process called "Digivolution" which changes their appearance and increases their physical powers. 
+            <a href="https://digimon.fandom.com/wiki/Digimon_Wiki">(More Information Here)</a>
         </p>
+        <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/FUE_rsMvqYU" frameborder="0" allowfullscreen></iframe>
+        </iframe>
     </div>
     <div id="digi-main"> 
     </div>
-    <div id="digi-container" class='content'>
-        <div id="digi-loads">
-            <div id="load1"></div>
-            <div id="load2"></div>
-            <div id="load3"></div>
+    <div id="digi-container">
+        <div id="digi-loads" class='grid-container'>
+            <div class="grid-item" id="load1"></div>
+            <div class="grid-item" id="load2"></div>
+            <div class="grid-item" id="load3"></div>
         </div>
     </div>
     </div>
@@ -61,19 +65,18 @@
             Error!
         </h1>
         <h2>
-            Only Three Loads are Available!
+            Only Three Digimon Loads at a Time!
         </h2>
     </div>
     <div id="nonlocate-message" hidden>
         <h2>
-            We were unable to find that Digimon at this time. :(
+            We were unable to find that Digimon at this time or our server made an issue. :(
         </h2>
     </div>
     <footer>
         <h5>
             <strong>Important: </strong>
-            I do not own Digimon nor claim property. Thank you to <a href=''><b>(username)</b></a> for the inspiration. The photo is an original work by the
-            developer of this page, <em>Jerome Allen-Smith.</em>
+            I do not own Digimon nor claim property. The background photo is fan art created by an unknown author, inspired by the world of the Matrix.
         </h5>
     </footer>
     <script src="./Javascripts/index.js"></script>

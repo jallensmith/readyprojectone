@@ -21,16 +21,16 @@ body {
 
 #team-bttns {
     position: relative;
-    top: 625px;
+    top: 580px;
     align-content: center;
     align-items: center;
-    padding-left: 650px;
+    padding-left: 658px;
     color:aliceblue
 }
 
 #hyperlink {
     position: relative;
-    padding-left: 60px;
+    left: -128px;
     color:aliceblue
 }
 
@@ -45,22 +45,39 @@ footer {
     bottom: 10px;
     position: relative;
     align-items: center;
-    left: 705px;
-    top: -120px;
+    left: 70px;
+    top: -88px;
     width: 300px;
     display: inline-block;
-    color:aliceblue
+    color: aliceblue;
 }
 
 #digi-container{
     float: right;
     position: relative;
-    bottom: 125px;
-    right: 153px;
-    color:aliceblue
+    bottom: 26px;
+    right: 64px;
+    color: aliceblue;
 }
 
 #digi-description{
-    color:aliceblue
+    color:aliceblue;
+    display: inline-block;
+    padding-left: 9px;
 }
 
+#video {
+    display: inline-block;
+    position: relative;
+}
+
+p {
+    height: fit-content;
+    width: 549px; 
+}
+
+h2{
+    width: 541px;
+    height: 35px;
+    text-align: center;
+}

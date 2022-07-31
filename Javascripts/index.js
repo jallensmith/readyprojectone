@@ -50,23 +50,24 @@ async function loadDigi(userInput) {
     }
 
     if (!digimonFound) {
-        alert('no digimon found')
+        alert('We were unable to find that Digimon at this time or our server made an issue. :(')
     }
-}; 
+};
 
 // Event Listeners
-document.addEventListener('DOMContentLoaded', function () {
-    loadDigi();
-    addButton();
-    deleteBttn();
-});
 
 searchBttn.addEventListener('click', e => {
     loadDigi(searchBox.value);
     searchBox.value = '';
-    document.addEventListener('submit', function () {
-        form.reset()
-    })
+});
+
+searchBox.addEventListener('keypress', function (event) {
+
+    if (event.key === "Enter") {
+        event.preventDefault();
+        searchBttn.click();
+    }
+
 });
 
 const addButton = () => addDigi.addEventListener('click', e => {
@@ -77,7 +78,13 @@ const deleteBttn = () => deleteDigi.addEventListener('click', e => {
     deleteDigiFromTeam();
 })
 
-// dblclick EL & Keypress https://www.w3schools.com/howto/howto_js_trigger_button_enter.asp
+document.addEventListener('DOMContentLoaded', function () {
+    loadDigi();
+    addButton();
+    deleteBttn();
+});
+// dblclick EL 
+
 
 // Event Handler 
 function addDigiToTeam() {
@@ -90,6 +97,7 @@ function addDigiToTeam() {
     const digiName = document.createElement('h1');
     const digiLevel = document.createElement('h3');
 
+
     digiName.innerText = member.name;
     digiModel.src = member.img;
     digiLevel.innerText = member.level;
@@ -99,10 +107,10 @@ function addDigiToTeam() {
     const loadThree = document.getElementById('load3');
 
     if (loadThree.innerHTML) {
-        alert('Only Three!')
+        alert('Only Three Digimon Loads at a Time!')
     }
 
-    switch ("") {
+      switch ("") {
         case loadOne.innerHTML:
             loadOne.appendChild(digiName)
             loadOne.appendChild(digiModel)
