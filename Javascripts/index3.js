@@ -1,6 +1,8 @@
 // Global Variables
 const digiAPI = `https://digimon-api.vercel.app/api/digimon`;
 let currentTeam = []
+let digiMember
+digiMember.id = 1
 
 // Node Getters
 const digiSearchContainer = document.getElementById('digi-main')
