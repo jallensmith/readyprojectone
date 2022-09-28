@@ -3,7 +3,6 @@ const digiAPI = `https://digimon-api.vercel.app/api/digimon`;
 let allDigimons = [];
 let digimonStorage = [];
 let currentDigimon = '';
-let newDigiStorage = []; 
 
 // Node Getters
 const digiDisplay = document.getElementById('digi-main');
@@ -18,83 +17,60 @@ const digiHolder = document.getElementById('digi-container');
 const digiTeam = document.getElementById('digi-loads');
 
 // Fetch Requests
-const fetchDigimon = () => {fetch(digiAPI) 
+const loadDigi = (userInput) => 
+{fetch(digiAPI)
 .then(response => response.json())
 .then(allDigimons => {
-    // console.log(allDigimons[1].name)
-    newDigiStorage = allDigimons
-    console.log(newDigiStorage)
+    allDigimons.map(digimon => {
+        let digimonFound = false
+        if (digimon.name.toUpperCase() === userInput.toUpperCase()) {
+            const previewBox = document.createElement('div');
+            const digiModel = document.createElement('img');
+            const digiName = document.createElement('h1');
+            const digiLevel = document.createElement('h3');
     
-    // allDigimons.forEach((digimon) => {
-                    
-
-    //             if (digimon.toUpperCase() === userInput.toUpperCase()) {
-    //                 const previewBox = document.createElement('div');
-    //                 const digiModel = document.createElement('img');
-    //                 const digiName = document.createElement('h1');
-    //                 const digiLevel = document.createElement('h3');
-        
-    //                 digiName.innerText = digimon.name;
-    //                 digiModel.src = digimon.img;
-    //                 digiLevel.innerText = 'Level: ' + digimon.level;
-        
-    //                 digiDisplay.innerHTML = '';
-        
-    //                 digiDisplay.append(previewBox);
-        
-    //                 previewBox.append(digiName);
-    //                 previewBox.append(digiModel);
-    //                 previewBox.append(digiLevel);
-        
-    //                 currentDigimon = digimon;
-    //                 digimonFound = true;
+            digiName.innerText = digimon.name;
+            digiModel.src = digimon.img;
+            digiLevel.innerText = 'Level: ' + digimon.level;
+    
+            digiDisplay.innerHTML = '';
+    
+            digiDisplay.append(previewBox);
+    
+            previewBox.append(digiName);
+            previewBox.append(digiModel);
+            previewBox.append(digiLevel);
+    
+            currentDigimon = digimon;
+            digimonFound = true;
+            // console.log(currentDigimon);
+        }
+        if (!digimonFound) {
+            alert('We were unable to find that Digimon at this time or our server made an issue. :(')
+        }
+    })
 })}
-// )})}
 
-function searchDigimon (event) {
-    newDigiStorage.find(digimon => 
-        digimon === event.target[0].value)
-}; 
+// Event Listeners
+
+document.addEventListener('DOMContentLoaded', function () {
+    loadDigi();
+    addButton();
+    deleteBttn();
+});
+
+searchBttn.addEventListener('click', e => {
+    e.preventDefault()
+    loadDigi(searchBox.value);
+    searchBox.value = '';
+});
 
 searchBox.addEventListener('keypress', function (event) {
-
     if (event.key === "Enter") {
         event.preventDefault();
         searchBttn.click();
     }
-
 });
-
-    
-
-
-
-// async function loadDigi(userInput) {
-//     const response = await fetch(digiAPI);
-//     const data = await response.json();
-//     allDigimons = data;
-//     // debugger; 
-//     let digimonFound = false
-//     // .map returns an array or .forEach 
-//     allDigimons.forEach((digimon) => {
-//         console.log(digimon)
-//             // console.log(currentDigimon);
-//         }
-//     }
-
-//     if (!digimonFound) {
-//         alert('We were unable to find that Digimon at this time or our server made an issue. :(')
-//     }
-// };
-
-// Event Listeners
-
-searchBttn.addEventListener('click', (e) => {
-    e.preventDefault()
-    fetchDigimon(e);
-    searchBox.value = '';
-});
-
 
 const addButton = () => addDigi.addEventListener('click', e => {
     addDigiToTeam(digimonStorage);
@@ -104,20 +80,14 @@ const deleteBttn = () => deleteDigi.addEventListener('click', e => {
     deleteDigiFromTeam();
 })
 
-document.addEventListener('DOMContentLoaded', function () {
-    // loadDigi();
-    addButton();
-    deleteBttn();
-    fetchDigimon(); 
-});
 // dblclick EL 
-
 
 
 // Event Handler 
 function addDigiToTeam() {
     digimonStorage.push(currentDigimon);
-    
+    // console.log(currentDigimon);
+
     let member = digimonStorage[digimonStorage.length - 1]
 
     const digiModel = document.createElement('img');
@@ -137,7 +107,7 @@ function addDigiToTeam() {
         alert('Only Three Digimon Loads at a Time!')
     }
 
-      switch ("") {
+    switch ("") {
         case loadOne.innerHTML:
             loadOne.appendChild(digiName)
             loadOne.appendChild(digiModel)
@@ -154,7 +124,6 @@ function addDigiToTeam() {
             break
         default:
     }
-
 };
 
 function deleteDigiFromTeam() {

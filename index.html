@@ -1,31 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
- 
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./Styling Sheets/index.css" class="rel">
     <title>Digimon Team Builder</title>
+    <script defer src="./index3.js"></script>
     <style>
-        body  {
-          background-image: url("./Images/Background1.gif");
+        body {
+            background-image: url("./Images/Background1.gif");
         }
-        </style>
+    </style>
 </head>
- 
+
 <body>
-    <header class="center" >
-    <img id="logo" src="./Images/logo.png" alt="Digimon Logo">
+    <header class="center">
+        <img id="logo" src="./Images/logo.png" alt="Digimon Logo">
     </header>
     <div id="search-box">
-        <label for="search-digimon">
+        <!-- <label for="search-digimon">
             <span>
                 Enter Digimon Name Here!
             </span>
-        </label>
-        <input id="mon-name" type="text" placeholder="Search by Digimon Name">
-        <button id="search-bttn">Search</button>
+        </label> -->
+        
+        <form id="form">
+            <label for="fname">Search by Digimon Name</label>
+            <input id="mon-name" type="text" placeholder="Enter Digimon Here">
+            <!-- <input type="text" id="digisearch" name="digisearch"><br> -->
+            <button id="search-bttn">Search</button>
+        </form>
     </div>
     <div id="team-bttns" class="center">
         <button id="add-bttn">Add to Downloads</button>
@@ -35,30 +41,36 @@
             <a href="https://wikimon.net/Visual_List_of_Digimon"> <em>Catalog of Digimon!</em> </a>
         </h2>
     </div>
-    
+
     <div class="wrapper">
         <div id="digi-description">
-        <h2>
-            Welcome to the Digi-Team Builder!
-        </h2>
-        <p>
-            Digimon (デジモン Dejimon?), short for "Digital Monster" (デジタルモンスター Dejitaru Monsutā?), are mysterious 
-            lifeforms that were discovered in the Computer Network in 1997. 
-            Digimon include almost all the creatures that reside within a parallel universe called the "Digital World." They age via a process called "Digivolution" which changes their appearance and increases their physical powers. 
-            <a href="https://digimon.fandom.com/wiki/Digimon_Wiki">(More Information Here)</a>
-        </p>
-        <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/FUE_rsMvqYU" frameborder="0" allowfullscreen></iframe>
-        </iframe>
-    </div>
-    <div id="digi-main"> 
-    </div>
-    <div id="digi-container">
-        <div id="digi-loads" class='grid-container'>
-            <div class="grid-item" id="load1"></div>
-            <div class="grid-item" id="load2"></div>
-            <div class="grid-item" id="load3"></div>
+            <h2>
+                Welcome to the Digi-Team Builder!
+            </h2>
+            <p>
+                Digimon (デジモン Dejimon?), short for "Digital Monster" (デジタルモンスター Dejitaru Monsutā?), are mysterious
+                lifeforms that were discovered in the Computer Network in 1997.
+                Digimon include almost all the creatures that reside within a parallel universe called the "Digital
+                World." They age via a process called "Digivolution" which changes their appearance and increases their
+                physical powers.
+                <a href="https://digimon.fandom.com/wiki/Digimon_Wiki">(More Information Here)</a>
+            </p>
+            <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/FUE_rsMvqYU" frameborder="0"
+                allowfullscreen></iframe>
+            </iframe>
         </div>
-    </div>
+        <div id="digi-main">
+        </div>
+        <div id="digi-container">
+            <h2>
+                Only Digimon Can Be Loaded To Your Team at a Time
+            </h2>
+            <div id="digi-loads" class='grid-container'>
+                <div class="grid-item" id="load1"></div>
+                <div class="grid-item" id="load2"></div>
+                <div class="grid-item" id="load3"></div>
+            </div>
+        </div>
     </div>
     <div id="error-message" hidden>
         <h1>
@@ -76,10 +88,10 @@
     <footer>
         <h5>
             <strong>Important: </strong>
-            I do not own Digimon nor claim property. The background photo is fan art created by an unknown author, inspired by the world of the Matrix.
+            I do not own Digimon nor claim property. The background photo is fan art created by an unknown author,
+            inspired by the world of the Matrix.
         </h5>
     </footer>
-    <script src="./Javascripts/index.js"></script>
 </body>
- 
+
 </html>
