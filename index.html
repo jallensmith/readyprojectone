@@ -5,9 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="./Styling Sheets/index.css" class="rel">
+
     <title> Digimon Team Builder</title>
+
     <script defer src="./Javascripts/index5.js"></script>
+
     <style>
         body {
             background-image: url("./Assets/Background1.gif")
@@ -20,23 +24,17 @@
         <img id="logo" src="./Assets/logo.png" alt="Digimon Logo">
     </header>
     <div id="search-box">
-        <!-- <label for="search-digimon">
-            <span>
-                Enter Digimon Name Here!
-            </span>
-        </label> -->
 
         <form id="form">
             <label for="fname">Search by Digimon Name</label>
             <input id="mon-name" type="text" placeholder="Enter Digimon Here">
-            <!-- <input type="text" id="digisearch" name="digisearch"><br> -->
             <button id="search-bttn">Search</button>
         </form>
+
     </div>
 
     <div id="team-bttns" class="center">
-        <button id="add-bttn">Add to Downloads</button>
-        <!-- <button id="delete-bttn">Delete Last Download</button> -->
+        <button id="add-bttn">Add to Your Team!</button>
         <br>
         <h2 id="hyperlink">
             <a href="https://wikimon.net/Visual_List_of_Digimon"> <em>Catalog of Digimon!</em> </a>
@@ -44,9 +42,10 @@
     </div>
 
     <div class="wrapper">
+
         <div id="digi-description">
             <h2>
-                Welcome to the Digi-Team Builder!
+                Welcome to the Digimon-Team Builder!
             </h2>
             <p>
                 Digimon (デジモン Dejimon?), short for "Digital Monster" (デジタルモンスター Dejitaru Monsutā?), are mysterious
@@ -65,15 +64,14 @@
         </div>
 
         <div id="digi-container">
-            <!-- <h2>
-            Only Digimon Can Be Loaded To Your Team at a Time
-        </h2> -->
+
             <div id="digi-loads" class='grid-container'>
                 <div class="grid-item" id="load1"></div>
                 <div class="grid-item" id="load2"></div>
                 <div class="grid-item" id="load3"></div>
             </div>
         </div>
+
     </div>
 
     <div id="error-message" hidden>
@@ -90,6 +88,7 @@
             We were unable to find that Digimon at this time or our server made an issue. :(
         </h2>
     </div>
+
     <footer>
         <h5>
             <strong>Important: </strong>
@@ -97,6 +96,7 @@
             inspired by the world of the Matrix.
         </h5>
     </footer>
+
 </body>
 
 </html>
