@@ -1,51 +1,99 @@
-const digiAPI = `https://digimon-api.vercel.app/api/digimon`
-const form = document.querySelector("form")
-const mainDisplay = document.getElementById('digi-main');
-const addDigi = document.getElementById('add-bttn');
+const baseURL = 'https://digimon-api.vercel.app/api/digimon'
+let digiTeam = []
+
+const mainContainer = document.getElementById('digi-main')
+const teamContainer = document.getElementById('digi-container')
+const loadOne = document.getElementById('load1');
+const loadTwo = document.getElementById('load2');
+const loadThree = document.getElementById('load3');
+
+const addBttn = document.getElementById('add-bttn')
+const form = document.querySelector('form')
+
+const logo = document.getElementById('logo')
 const div = document.createElement('div')
-let digiArray = []
-let teamArray = []
+const h2 = document.createElement('h2')
+const img = document.createElement('img')
+const p = document.createElement('p')
 
-document.addEventListener("DOMContentLoaded", (event) => {
+form.addEventListener('submit', (event) => {
     event.preventDefault()
-    fetchDigimon()
+    let userInput = event.target[0].value
+    renderDigi(userInput)
+    form.reset()
 })
 
-form.addEventListener("submit", (event) => {
-    event.preventDefault()
-    fetchDigimon(event.target[0].value)
-    console.log(event)
+addBttn.addEventListener('click', () => {
+
+    for (const member of digiTeam) {
+        let member = digiTeam[digiTeam.length - 1]
+
+        const card = document.createElement('div')
+
+        const teamH2 = document.createElement('h2')
+        const teamImg = document.createElement('img')
+        const teamDescription = document.createElement('p')
+        const deleteButton = document.createElement('button')
+
+        deleteButton.innerText = 'Delete from Team'
+        teamImg.src = member.img
+        teamH2.innerText = member.name
+        teamH2.style.color = 'red'
+        teamDescription.innerText = member.level
+
+        deleteButton.addEventListener('click', () => {
+            if (loadOne.innerHTML) {
+                return loadOne.innerHTML = ''
+            } else if (loadTwo.innerHTML) {
+                return loadTwo.innerHTML = ''
+            } else if (loadThree.innerHTML) {
+                return loadThree.innerHTML = ''
+            }
+        })
+
+        card.append(teamH2, teamImg, teamDescription, deleteButton)
+
+        if (!loadOne.innerHTML) {
+            return loadOne.append(card)
+        } else if (!loadTwo.innerHTML) {
+            return loadTwo.append(card)
+        } else if (!loadThree.innerHTML) {
+            return loadThree.append(card)
+        }
+
+    }
 })
 
-addDigi.addEventListener("click", () => {
-    
+logo.addEventListener('dblclick', () => {
+    const themeSong = new Audio('./Music/theme_Song.mp3')
+    themeSong.play()
 })
 
-const fetchDigimon = (search) => {
-    fetch(digiAPI)
-    .then(resp => resp.json())
-    .then(allDigimons => {
-        allDigimons.forEach(digimon => {
+const renderDigi = (search) => {
+    fetch(baseURL)
+        .then(resp => resp.json())
+        .then(allDigimons => allDigimons.forEach(digimon => {
             if (digimon.name.toUpperCase() === search.toUpperCase()) {
-               
-                mainDisplay.innerHTML = ''
-                div.innerHTML = ''
-                
-                const h2 = document.createElement('h2')
-                const img = document.createElement('img')
-                const h3 = document.createElement('h3')
+                digiTeam.push(digimon)
+                mainContainer.innerHTML = ""
 
-                h2.innerText = digimon.name
-                img.src = digimon.img
-                h3.innerText = `Level: ${digimon.level}`
+                displayMon(digimon)
+                div.append(h2, img, p)
 
-                div.append(h2, img, h3)
-                mainDisplay.append(div)
-                addDigi.addEventListener("click", () => {
-                    
-                    teamArray.push(digimon)
+                img.addEventListener('mouseover', () => {
+                    img.style.height = '500px'
+                    img.style.width = '500px'
                 })
-    }})
-})}
 
+                mainContainer.append(div)
+            }
 
+        }))
+}
+
+const displayMon = (digimon) => {
+    h2.innerText = digimon.name
+    h2.style.color = 'yellow'
+    img.src = digimon.img
+    p.innerText = `Level: ${digimon.level}`
+}

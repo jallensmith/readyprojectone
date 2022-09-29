@@ -4,8 +4,9 @@ header {
     padding-left: 600px;
 }
 
+
 body {
-    background-image: url();
+    background-image: url("./Assets/Background1.gif");
     background-position: center;
     background-size: cover;
     min-height: 100vh;
@@ -21,7 +22,7 @@ body {
 
 #team-bttns {
     position: relative;
-    top: 580px;
+    top: 650px;
     align-content: center;
     align-items: center;
     padding-left: 658px;
@@ -30,7 +31,7 @@ body {
 
 #hyperlink {
     position: relative;
-    left: -128px;
+    left: -100px;
     color: whitesmoke; 
 }
 

@@ -6,18 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./Styling Sheets/index.css" class="rel">
-    <title>Digimon Team Builder</title>
-    <script defer src="./index3.js"></script>
+    <title> Digimon Team Builder</title>
+    <script defer src="./Javascripts/index5.js"></script>
     <style>
         body {
-            background-image: url("./Images/Background1.gif");
+            background-image: url("./Assets/Background1.gif")
         }
     </style>
 </head>
 
 <body>
     <header class="center">
-        <img id="logo" src="./Images/logo.png" alt="Digimon Logo">
+        <img id="logo" src="./Assets/logo.png" alt="Digimon Logo">
     </header>
     <div id="search-box">
         <!-- <label for="search-digimon">
@@ -25,7 +25,7 @@
                 Enter Digimon Name Here!
             </span>
         </label> -->
-        
+
         <form id="form">
             <label for="fname">Search by Digimon Name</label>
             <input id="mon-name" type="text" placeholder="Enter Digimon Here">
@@ -33,9 +33,10 @@
             <button id="search-bttn">Search</button>
         </form>
     </div>
+
     <div id="team-bttns" class="center">
         <button id="add-bttn">Add to Downloads</button>
-        <button id="delete-bttn">Delete Last Download</button>
+        <!-- <button id="delete-bttn">Delete Last Download</button> -->
         <br>
         <h2 id="hyperlink">
             <a href="https://wikimon.net/Visual_List_of_Digimon"> <em>Catalog of Digimon!</em> </a>
@@ -59,12 +60,14 @@
                 allowfullscreen></iframe>
             </iframe>
         </div>
+
         <div id="digi-main">
         </div>
+
         <div id="digi-container">
-            <h2>
-                Only Digimon Can Be Loaded To Your Team at a Time
-            </h2>
+            <!-- <h2>
+            Only Digimon Can Be Loaded To Your Team at a Time
+        </h2> -->
             <div id="digi-loads" class='grid-container'>
                 <div class="grid-item" id="load1"></div>
                 <div class="grid-item" id="load2"></div>
@@ -72,6 +75,7 @@
             </div>
         </div>
     </div>
+
     <div id="error-message" hidden>
         <h1>
             Error!
@@ -80,6 +84,7 @@
             Only Three Digimon Loads at a Time!
         </h2>
     </div>
+
     <div id="nonlocate-message" hidden>
         <h2>
             We were unable to find that Digimon at this time or our server made an issue. :(
