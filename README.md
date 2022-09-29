@@ -8,7 +8,7 @@ The Digi-Team Builder is designed to give you the ability to build your own cust
 Users will be able to:
 - Search through a database of Digimon and upon correct entry of their name, will be see their name, image, and level.
 - Add up to three (3) Digimon to their Teams by clicking on the "Add to Downloads" Button.
-- Delete the Last loaded Digimon into their Team by clicking on the "Delete Last Download" Button.
+- Delete Any Digimon from Team throgh clicking "Delete Digimon from Team"
 
 # Links:
 Link to Video-Explainer: https://youtu.be/0OH1b3tB0Io
