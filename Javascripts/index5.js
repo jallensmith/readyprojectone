@@ -1,6 +1,8 @@
+// Global Variables
 const baseURL = 'https://digimon-api.vercel.app/api/digimon'
 let digiTeam = []
 
+// Node Getters
 const mainContainer = document.getElementById('digi-main')
 const teamContainer = document.getElementById('digi-container')
 const loadOne = document.getElementById('load1');
@@ -16,6 +18,7 @@ const h2 = document.createElement('h2')
 const img = document.createElement('img')
 const p = document.createElement('p')
 
+// Event Listeners
 form.addEventListener('submit', (event) => {
     event.preventDefault()
     let userInput = event.target[0].value
@@ -69,6 +72,7 @@ logo.addEventListener('dblclick', () => {
     themeSong.play()
 })
 
+// Event Handlers
 const renderDigi = (search) => {
     fetch(baseURL)
         .then(resp => resp.json())
