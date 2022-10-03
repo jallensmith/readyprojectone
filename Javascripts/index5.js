@@ -95,11 +95,46 @@ addBttn.addEventListener('click', () => {
     }
 })
 
-logo.addEventListener('dblclick', () => {
-    const themeSong = new Audio('./Music/theme_Song.mp3')
-    themeSong.play()
-    // if, then statement to play/pause
+
+
+const themeSong = new Audio('./Music/theme_Song.mp3')
+
+async function playSong() {
+    await themeSong.play()
+}
+
+function pauseSong() {
+    themeSong.pause()
+}
+
+logo.addEventListener('dblclick', (event) => {
+    console.log(event)
+    event.preventDefault()
+    if (themeSong.paused) {
+        playSong()
+    } else {
+        pauseSong()
+    }
 })
+
+
+// themeSong.play()
+// if, then statement to play/pause
+// if the node is double clicked, play audio, if the node is double clicked, then pause -- boolean -- if the variable is true, function play and if the variable is false, function for pause
+// 
+
+// let digiThemeSong 
+
+// if(!digiThemeSong) {logo.addEventListener('dblclick', () => {  
+//     themeSong.play()
+//     digiThemeSong = !digiThemeSong
+// })} else {
+//     logo.addEventListener('dblclick', (event) => {
+//     console.log("Event2:", event)
+//     const themeSong = new Audio('./Music/theme_Song.mp3')
+//     themeSong.pause()
+//     })
+// }
 
 // Event Handlers
 
