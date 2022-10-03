@@ -18,6 +18,34 @@ const h2 = document.createElement('h2')
 const img = document.createElement('img')
 const p = document.createElement('p')
 
+// Fetch Request
+const renderDigi = (search) => {
+    fetch(baseURL)
+        .then(resp => resp.json())
+        .then(allDigimons => allDigimons.forEach(digimon => {
+            if (digimon.name.toUpperCase() === search.toUpperCase()) {
+                digiTeam.push(digimon)
+                mainContainer.innerHTML = ""
+
+                displayMon(digimon)
+                div.append(h2, img, p)
+
+                img.addEventListener('mouseover', () => {
+                    img.style.height = '500px'
+                    img.style.width = '500px'
+                })
+
+                img.addEventListener('mouseout', () => {
+                    img.style.height = '350px'
+                    img.style.width = '350px'
+                })
+
+                mainContainer.append(div)
+            }
+
+        }))
+}
+
 // Event Listeners
 form.addEventListener('submit', (event) => {
     event.preventDefault()
@@ -70,30 +98,10 @@ addBttn.addEventListener('click', () => {
 logo.addEventListener('dblclick', () => {
     const themeSong = new Audio('./Music/theme_Song.mp3')
     themeSong.play()
+    // if, then statement to play/pause
 })
 
 // Event Handlers
-const renderDigi = (search) => {
-    fetch(baseURL)
-        .then(resp => resp.json())
-        .then(allDigimons => allDigimons.forEach(digimon => {
-            if (digimon.name.toUpperCase() === search.toUpperCase()) {
-                digiTeam.push(digimon)
-                mainContainer.innerHTML = ""
-
-                displayMon(digimon)
-                div.append(h2, img, p)
-
-                img.addEventListener('mouseover', () => {
-                    img.style.height = '500px'
-                    img.style.width = '500px'
-                })
-
-                mainContainer.append(div)
-            }
-
-        }))
-}
 
 const displayMon = (digimon) => {
     h2.innerText = digimon.name
